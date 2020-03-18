@@ -2,7 +2,8 @@ const formSearch = document.querySelector('.form-search'),
     inputCitiesFrom = formSearch.querySelector('.input__cities-from'),
     inputCitiesTo = formSearch.querySelector('.input__cities-to'),
     dropdownCitiesFrom = formSearch.querySelector('.dropdown__cities-from'),
-    inputDateDepart = formSearch.querySelector('.input__date-depart');
+    inputDateDepart = formSearch.querySelector('.input__date-depart'),
+    dropdownCitiesTo = formSearch.querySelector('.dropdown__cities-to');
 
 const cities = ['Москва', 'Челябинск', 'Санкт-Петербург', 'Ухань', 'Нижний Новгород', 'Берн',
             'Берлин', 'Самара', 'Париж', 'Краснодар', 'Калининград', 'Варшава', 'Прага', 'Пекин',
@@ -33,6 +34,14 @@ const hideCities = (input, listToHide, e) => {
         listToHide.textContent = '';
     }
 }
+
+inputCitiesTo.addEventListener('input', () => {
+    showCity(inputCitiesTo, dropdownCitiesTo);
+});
+
+dropdownCitiesTo.addEventListener('click', (e) => {
+    hideCities(inputCitiesTo, dropdownCitiesTo, e);
+});
 
 inputCitiesFrom.addEventListener('input', () => {
     showCity(inputCitiesFrom, dropdownCitiesFrom);
