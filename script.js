@@ -83,12 +83,12 @@ dropdownCitiesFrom.addEventListener('click', (e) => {
 
 //ВЫЗОВ ФУНКЦИЙ
 
-/*getData(cityAPI, (data) => {
+getData(cityAPI, (data) => {
     cities = JSON.parse(data).filter((item) => {
         return item.name;
     });
     console.log(JSON.parse(data));
-});*/
+});
 
 getData(CALENDAR, (data) => {
     let t = JSON.parse(data);
