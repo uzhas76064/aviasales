@@ -6,7 +6,8 @@ const formSearch = document.querySelector('.form-search'),
     inputDateDepart = formSearch.querySelector('.input__date-depart'),
     dropdownCitiesTo = formSearch.querySelector('.dropdown__cities-to'),
     cheapestTicket = document.getElementById('cheapest-ticket'),
-    otherCheapTickets = document.getElementById('other-cheap-tickets');
+    otherCheapTickets = document.getElementById('other-cheap-tickets'),
+    modalOpen = document.getElementById('modal');
 
 //ДАННЫЕ
 
@@ -205,7 +206,7 @@ const formingData = (e) => {
             renderCheap(response, formData.when);
         })
     }
-    else alert("Введите правильное название города!");
+    else modal.style.display = 'block';
 }
 
 //ОБРАБОТКА СОБЫТИЙ
